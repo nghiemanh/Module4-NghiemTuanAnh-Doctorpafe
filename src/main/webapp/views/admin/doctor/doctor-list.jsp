@@ -10,14 +10,14 @@
           crossorigin="anonymous">
 </head>
 <body>
-<%--<%--%>
-<%--    String username = (String).session.getAttribute("tendangnhap");--%>
-<%--    if (session != null) {--%>
-<%--        System.out.println("Hello" + username);--%>
-<%--    } else {--%>
-<%--        System.out.println("Hello");--%>
-<%--    }--%>
-<%--%>--%>
+<%
+    String username = (String).session.getAttribute("tendangnhap");
+    if (session != null) {
+        System.out.println("Hello" + username);
+    } else {
+        System.out.println("Hello");
+    }
+%>
 <header>
     <nav class="navbar navbar-expand-md navbar-dark"
          style="background-color: blue">
