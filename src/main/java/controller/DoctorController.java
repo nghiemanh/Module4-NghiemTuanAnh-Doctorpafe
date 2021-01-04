@@ -2,6 +2,7 @@ package controller;
 
 import dao.DoctorDAO;
 import model.DoctorModel;
+import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,6 +16,7 @@ import java.util.List;
 @WebServlet(urlPatterns = {"/admin-doctor"})
 public class DoctorController extends HttpServlet {
 
+    @Inject
     private DoctorDAO doctorDAO;
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -27,7 +29,7 @@ public class DoctorController extends HttpServlet {
             throws SQLException, IOException, ServletException {
         List<DoctorModel> listUser = doctorDAO.selectAllDoctor();
         request.setAttribute("listUser", listUser);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("doctor-list.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/views/admin/doctor/doctor-list.jsp");
         dispatcher.forward(request, response);
     }
 

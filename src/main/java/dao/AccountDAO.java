@@ -4,7 +4,7 @@ package dao;
 import java.sql.*;
 
 public class AccountDAO {
-    private static final String CHECK_LOGIN = "select * from account where username = ? and password = ?";
+    private static final String CHECK_LOGIN = "SELECT * FROM ACCOUNT WHERE USERNAME = ? and PASSWORD = ?";
 
     private static Connection getConnection() {
         String jdbcURL = "jdbc:mysql://localhost:3306/doctor";
@@ -30,11 +30,7 @@ public class AccountDAO {
             preparedStatement.setString(1, username);
             preparedStatement.setString(2, password);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                isValid = true;
-            } else {
-                isValid = false;
-            }
+                isValid = resultSet.next();
 
         } catch (
                 Exception e) {
