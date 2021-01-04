@@ -56,7 +56,6 @@ public class DoctorDAO {
         return doctoInfo;
     }
 
-
     public List<DoctorModel> selectAllDoctor() {
         List<DoctorModel> results = new ArrayList<>();
         //open connection
