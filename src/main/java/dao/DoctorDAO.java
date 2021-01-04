@@ -1,9 +1,7 @@
 package dao;
 
-
 import model.DoctoInfo;
 import model.DoctorModel;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +11,8 @@ public class DoctorDAO {
     private String jdbcUsername = "root";
     private String jdbcPassword = "root";
 
-    private static final String SELECT_USER_BY_ID = "SELECT * FROM DOCTORINFO WHERE ID = ?";
-    private static final String SELECT_ALL_USERS = "SELECT * FROM DOCTORINFO";
+    private static final String SELECT_USER_BY_ID = "SELECT * FROM DOCTORLIST WHERE ID = ?";
+    private static final String SELECT_ALL_USERS = "SELECT * FROM DOCTORLIST";
 
     public DoctorDAO() {
 
