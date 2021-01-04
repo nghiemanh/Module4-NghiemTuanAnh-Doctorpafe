@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1> Login </h1>
-<form action="loginController" method="post">
+<form action="${pageContext.request.contextPath}/login-controller" method="post">
     <label> Username: </label>
     <input type="text" name="username"> <br>
     <label> Password: </label>

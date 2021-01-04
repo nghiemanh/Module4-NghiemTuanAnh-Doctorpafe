@@ -1,3 +1,5 @@
+-- noinspection SqlNoDataSourceInspectionForFile
+
 CREATE DATABASE doctor;
 USE doctor;
 
@@ -12,21 +14,9 @@ CREATE TABLE doctorlist (
     education NVARCHAR(100) NOT NULL,
     position NVARCHAR(255) NOT NULL,
     specialized NVARCHAR(255) NOT NULL,
-    hospital NVARCHAR(100) NOT NULL
-);
-
--- DROP TABLE doctorinfo;
-CREATE TABLE doctorinfo (
-    id INT(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    name NVARCHAR(45),
-    address NVARCHAR(100),
-    phone VARCHAR(20),
-    education NVARCHAR(100),
-    position NVARCHAR(255),
-    hospital NVARCHAR(100),
-    reward NVARCHAR(1000),
-    experience NVARCHAR(1000),
-    FOREIGN KEY (id) REFERENCES doctorlist(id)
+    hospital NVARCHAR(100) NOT NULL,
+    String reward NVARCHAR(1000),
+    experience NVARCHAR(1000)
 );
 
 CREATE TABLE account (
@@ -34,7 +24,6 @@ CREATE TABLE account (
     password NVARCHAR(45) not null,
     permission int
 );
-
 
 -- DROP TRIGGER INFO ;
 DELIMITER //

@@ -13,8 +13,8 @@ public class DoctorDAO {
     private String jdbcUsername = "root";
     private String jdbcPassword = "root";
 
-    private static final String SELECT_USER_BY_ID = "select * from doctorinfo where id =?";
-    private static final String SELECT_ALL_USERS = "select * from doctorlist";
+    private static final String SELECT_USER_BY_ID = "SELECT * FROM DOCTORINFO WHERE ID = ?";
+    private static final String SELECT_ALL_USERS = "SELECT * FROM DOCTORINFO";
 
     public DoctorDAO() {
 
