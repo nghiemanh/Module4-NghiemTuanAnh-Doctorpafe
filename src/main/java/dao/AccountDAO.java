@@ -30,7 +30,7 @@ public class AccountDAO {
             preparedStatement.setString(1, username);
             preparedStatement.setString(2, password);
             ResultSet resultSet = preparedStatement.executeQuery();
-                isValid = resultSet.next();
+            isValid = resultSet.next();
 
         } catch (
                 Exception e) {

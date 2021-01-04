@@ -2,6 +2,7 @@ package controller;
 
 import dao.DoctorDAO;
 import model.DoctorModel;
+
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
